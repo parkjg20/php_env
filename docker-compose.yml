@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+  ubuntu:
+    image: xpress-ubuntu # image-name
+    build: .
+    ports:
+      - "80:80"
+      # - <host-port>:<container-port>
+      - "33306:3306"
+    volumes:
+      - ../storage:/var/lib/mysql
+      - ./000-default.conf:/etc/apache2/sites-available/000-default.conf
+      # - ../<project-name>:/sources/<project-name>

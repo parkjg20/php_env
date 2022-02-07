@@ -12,3 +12,4 @@ services:
       - ../storage:/var/lib/mysql
       - ./000-default.conf:/etc/apache2/sites-available/000-default.conf
       # - ../<project-name>:/sources/<project-name>
+      - ../xpressengine:/sources/xpressengine
